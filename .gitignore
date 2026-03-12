@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store
+
+# Claude & dev tools
+.claude/
+.playwright-mcp/
+*.log
