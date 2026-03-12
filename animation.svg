@@ -1,0 +1,38 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <style>
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes record { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .reel-inner { transform-origin: center; animation: spin 4s linear infinite; }
+    .tally-light { animation: record 1.5s step-end infinite; }
+  </style>
+
+  <g transform="translate(100, 100) scale(1, 0.5) rotate(45)">
+    <rect x="-45" y="-35" width="90" height="70" fill="#121212" rx="2" stroke="#333" stroke-width="1"/>
+    
+    <rect x="-20" y="-45" width="40" height="10" fill="#1A1A1A" rx="1"/>
+
+    <rect x="45" y="-15" width="25" height="30" fill="#1A1A1A" />
+    <circle cx="70" cy="0" r="10" fill="#00B4D8" filter="url(#glow)" />
+    
+    <circle cx="40" cy="-25" r="3" fill="#FFB703" class="tally-light" />
+
+    <g transform="translate(-15, -50) rotate(-45) scale(1, 2)">
+       <circle cx="0" cy="0" r="22" fill="#1A1A1A" stroke="#2D6A4F" stroke-width="2"/>
+       <path d="M-12 0 L12 0 M0 -12 L0 12" stroke="#2D6A4F" stroke-width="2" class="reel-inner" />
+    </g>
+    
+    <g transform="translate(-50, -10) rotate(-45) scale(1, 2)">
+       <circle cx="0" cy="0" r="22" fill="#1A1A1A" stroke="#2D6A4F" stroke-width="2"/>
+       <path d="M-12 0 L12 0 M0 -12 L0 12" stroke="#2D6A4F" stroke-width="2" class="reel-inner" />
+    </g>
+  </g>
+</svg>

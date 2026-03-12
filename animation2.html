@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<body
+    style="background: #0A001A; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden;">
+
+    <div
+        style="position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(235,51,210,0.2) 0%, rgba(10,0,26,0) 70%); filter: blur(60px); animation: pulse 4s infinite ease-in-out;">
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center; z-index: 1;">
+        <svg viewBox="0 0 200 200" width="250" height="250">
+            <style>
+                @keyframes spin {
+                    from {
+                        transform: rotate(0deg);
+                    }
+
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                @keyframes pulse {
+
+                    0%,
+                    100% {
+                        opacity: 0.4;
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        opacity: 0.8;
+                        transform: scale(1.1);
+                    }
+                }
+
+                .reel {
+                    transform-origin: center;
+                    animation: spin 4s linear infinite;
+                }
+            </style>
+
+            <g transform="translate(100, 100) scale(1, 0.5) rotate(45)">
+                <rect x="-45" y="-35" width="90" height="70" fill="#1A002E" rx="4" stroke="#4A148C"
+                    stroke-width="1.5" />
+
+                <image href="logo.svg" x="-30" y="-25" width="60" height="60" transform="rotate(-45) scale(1, 2)" />
+
+                <g transform="translate(-15, -50) rotate(-45) scale(1, 2)">
+                    <circle cx="0" cy="0" r="22" fill="#120021" stroke="#4A148C" stroke-width="2" />
+                    <path d="M-12 0 L12 0 M0 -12 L0 12" stroke="#4A148C" stroke-width="2" class="reel" />
+                </g>
+                <g transform="translate(-50, -10) rotate(-45) scale(1, 2)">
+                    <circle cx="0" cy="0" r="22" fill="#120021" stroke="#4A148C" stroke-width="2" />
+                    <path d="M-12 0 L12 0 M0 -12 L0 12" stroke="#4A148C" stroke-width="2" class="reel" />
+                </g>
+            </g>
+        </svg>
+
+        <img src="Text input.svg" style="width: 140px; margin-top: 20px; opacity: 0.9;">
+    </div>
+</body>
+
+</html>
