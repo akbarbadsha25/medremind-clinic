@@ -1,10 +1,31 @@
+# Dependencies
 node_modules/
+
+# Build output
 dist/
+build/
+
+# Vite
+.vite/
+
+# Environment files
 .env
 .env.local
-.DS_Store
+.env.*.local
 
-# Claude & dev tools
+# Claude Code & dev tools
 .claude/
 .playwright-mcp/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
 *.log
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
